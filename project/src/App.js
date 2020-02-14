@@ -19,7 +19,12 @@ function App() {
 
   return (
     <div className="App">
-      {projects.map(proj => <h1 key={proj.id}>{proj.name}</h1>)}
+      {projects.map(proj => {
+        <div key={proj.id}>
+          <h1>{proj.name}</h1>
+          <p>{proj.decription}</p>
+        </div>
+      })}
     </div>
   );
 }
